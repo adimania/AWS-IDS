@@ -28,4 +28,4 @@ user_list_file.read(os.path.expanduser(args.list_user))
 local_user_names = user_list_file.get("verified_users", "unames", raw=True).split(',')
 diff = list(set(user_list) - set(local_user_names))
 if len(diff) > 0:
-    idsNotify.send_alert("AWS IDS: \nUnknown user detected: "+diff)
+    idsNotify.send_alert("AWS IDS: \nUnknown user detected: "+ str(diff))
