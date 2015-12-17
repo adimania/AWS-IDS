@@ -55,5 +55,5 @@ if len(diff) > 0:
 
 diff = list(set(list_instances) - set(trusted_instances))
 if len(diff) > 0:
-    idsNotify.send_alert("AWS IDS: \nUnknown instance in RDS: "+diff)
+    idsNotify.send_alert("AWS IDS: \nUnknown instance in RDS: "+str(diff))
 
